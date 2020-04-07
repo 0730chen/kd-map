@@ -22,6 +22,12 @@ const routes = [
     path:'/echarts',
     name:'Echarts',
     component:()=>import('../components/Echarts/EchartMap')
+  },
+  {
+    path:'/d3',
+    name:'d3',
+    component:()=>import('../components/D3/D3')
+
   }
 ]
 
