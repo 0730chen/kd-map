@@ -16,7 +16,7 @@ let options = {
     tooltip: {
         show: true,
         formatter: function (x) {
-            alert('点击了')
+            alert('点击了  ')
             return x.data.des;
         },
         triggerOn: 'click'
@@ -64,56 +64,134 @@ let options = {
         },
 
         // 数据
-        //是一个数组，每一项都是一个对象
+        // 是一个数组，每一项都是一个对象
+        // data: [{
+        //     name: '阿司匹林肠溶片',
+        //     des: '阿司匹林肠溶片',
+        //     symbolSize: 70,
+        //     category: 0,
+        // }, {
+        //     name: 'node02',
+        //     des: 'nodedes02',
+        //     symbolSize: 50,
+        //     category: 1,
+        // }, {
+        //     name: 'node03',
+        //     des: 'nodedes3',
+        //     symbolSize: 50,
+        //     category: 1,
+        // }, {
+        //     name: 'node04',
+        //     des: 'nodedes04',
+        //     symbolSize: 50,
+        //     category: 1,
+        // }, {
+        //     name: 'node05',
+        //     des: 'nodedes05',
+        //     symbolSize: 40,
+        //     category: 1,
+        // }],
+        // links: [{
+        //     source: '阿司匹林肠溶片',
+        //     target: 'node02',
+        //     name: 'link01',
+        //     des: 'link01des'
+        // }, {
+        //     source: '阿司匹林肠溶片',
+        //     target: 'node03',
+        //     name: 'link02',
+        //     des: 'link02des'
+        // }, {
+        //     source: '阿司匹林肠溶片',
+        //     target: 'node04',
+        //     name: 'link03',
+        //     des: 'link03des'
+        // }, {
+        //     source: '阿司匹林肠溶片',
+        //     target: 'node05',
+        //     name: 'link04',
+        //     des: 'link05des'
+        // }],
         data: [{
-            name: 'node01',
-            des: 'nodedes01',
-            next: 'node02',
+            name: '阿司匹林肠溶片',
+            des: '阿司匹林肠溶片',
             symbolSize: 70,
+            category: 1,
+        }, {
+            name: '症状',
+            des: '症状',
+            symbolSize: 50,
             category: 0,
         }, {
-            name: 'node02',
-            des: 'nodedes02',
-            symbolSize: 50,
-            category: 1,
+            name: '心肌梗死',
+            des: '心肌梗死',
+            symbolSize: 30,
+            category: 0,
         }, {
-            name: 'node03',
-            des: 'nodedes3',
-            symbolSize: 50,
-            category: 1,
+            name: '心绞痛',
+            des: '心绞痛',
+            symbolSize: 30,
+            category: 0,
         }, {
-            name: 'node04',
-            des: 'nodedes04',
-            symbolSize: 50,
-            category: 1,
+            name: '风湿症',
+            des: '风湿症',
+            symbolSize: 30,
+            category: 0,
         }, {
-            name: 'node05',
-            des: 'nodedes05',
-            symbolSize: 40,
-            category: 1,
+            name: '不良反应',
+            des: '不良反应',
+            symbolSize: 50,
+            category: 2,
+        }, {
+            name: '荨麻疹',
+            des: '荨麻疹',
+            symbolSize: 30,
+            category: 2,
+        }, {
+            name: '呕吐',
+            des: '呕吐',
+            symbolSize: 30,
+            category: 2,
+        }, {
+            name: '哮喘',
+            des: '哮喘',
+            symbolSize: 30,
+            category: 2,
         }],
         links: [{
-            source: 'node01',
-            target: 'node02',
-            name: 'link01',
-            des: 'link01des'
+            source: '阿司匹林肠溶片',
+            target: '症状',
+            name: '药品适应证',
         }, {
-            source: 'node01',
-            target: 'node03',
-            name: 'link02',
-            des: 'link02des'
+            source: '阿司匹林肠溶片',
+            target: '不良反应',
+            name: '不良反应',
+        },{
+            source: '症状',
+            target: '心肌梗死',
+            name: ''
         }, {
-            source: 'node01',
-            target: 'node04',
-            name: 'link03',
-            des: 'link03des'
+            source: '症状',
+            target: '心绞痛',
+            name: ''
         }, {
-            source: 'node01',
-            target: 'node05',
-            name: 'link04',
-            des: 'link05des'
+            source: '症状',
+            target: '风湿症',
+            name: ''
+        }, {
+            source: '不良反应',
+            target: '荨麻疹',
+            name: ''
+        }, {
+            source: '不良反应',
+            target: '呕吐',
+            name: ''
+        }, {
+            source: '不良反应',
+            target: '哮喘',
+            name: ''
         }],
-        categories: categories,
+        categories: ["疾病症状","药品","不良反应"]
     }],
 };
 
